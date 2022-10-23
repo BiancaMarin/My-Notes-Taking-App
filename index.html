@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Taker</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="scripts/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>My notes</h1>
+    </header>
+    <main>
+      <section class="input-dates">
+        <h3>Take your notes</h3>
+        <form action="" data-form>
+          <div>
+            <label for="title">Title</label>
+            <div>
+              <input type="text" id="title" data-title name="title" />
+              <p data-error-title></p>
+            </div>
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <div>
+              <textarea
+                name="note"
+                id="description"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <p data-error-note></p>
+            </div>
+          </div>
+          <button type="submit">Add note</button>
+        </form>
+      </section>
+      <section data-display class="output-dates"></section>
+    </main>
+  </body>
+</html>

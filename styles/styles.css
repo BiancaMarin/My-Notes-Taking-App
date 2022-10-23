@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,800;1,6..96,500&family=Fredoka+One&family=Hurricane&family=Poppins:wght@300;400;700;800&family=Roboto&family=Shadows+Into+Light&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-image: linear-gradient(#ff5a00, #ffae00);
+  width: 100%;
+}
+
+header h1 {
+  color: #fff;
+  padding: 1rem;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main .input-dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  padding-left: 1rem;
+}
+
+main .input-dates h3 {
+  margin: 0.5rem 0;
+}
+
+main .input-dates form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main .input-dates form input,
+textarea {
+  width: 15rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #dddddd;
+}
+
+main .input-dates form button {
+  background-image: linear-gradient(#ff5a00, #ffae00);
+  border: none;
+  border-radius: 8px;
+  height: 2rem;
+  cursor: pointer;
+}
+
+main .input-dates form button:hover {
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+main .input-dates form .error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.output-dates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main .output-dates .card {
+  background-color: #dddddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+main .output-dates .card h1 {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #fff;
+}
+
+main .output-dates .card p {
+  font-size: 0.8rem;
+}
+
+main .output-dates .card button {
+  background-image: linear-gradient(#ff5a00, #ffae00);
+  color: #000;
+  border: none;
+  width: 8rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main .output-dates .card button:hover {
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+.delete-btn {
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  main .input-dates {
+    gap: 2rem;
+    padding-right: 1rem;
+    border-right: 1px solid #000;
+    height: 100vh;
+  }
+
+  main .input-dates form {
+    gap: 1rem;
+  }
+
+  .output-dates {
+    padding-left: 2rem;
+  }
+}
