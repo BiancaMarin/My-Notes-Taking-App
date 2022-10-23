@@ -114,6 +114,13 @@ main .output-dates .card button:hover {
   color: red;
 }
 
+main .output-dates .card .date {
+  padding-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.7rem;
+  color: #3c4048;
+}
+
 @media screen and (min-width: 768px) {
   main {
     flex-direction: row;

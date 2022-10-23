@@ -47,6 +47,19 @@ function handleClick(e) {
   }
 }
 
+function getNoteDate() {
+  const currentDate = new Date();
+  const month = currentDate.getMonth();
+  const day = currentDate.getDate();
+  const year = currentDate.getFullYear();
+
+  const date = `${day}.${month}.${year}`;
+  console.log(date);
+  return date;
+}
+
+getNoteDate();
+
 //display notes//
 function displayNotes() {
   document.querySelectorAll('article').forEach((note) => note.remove());
@@ -60,7 +73,10 @@ function displayNotes() {
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete note';
     deleteButton.classList.add('delete-btn');
-    card.append(title, noteDescription, deleteButton);
+    const showDate = document.createElement('p');
+    showDate.innerText = getNoteDate();
+    showDate.classList.add('date');
+    card.append(title, noteDescription, deleteButton, showDate);
     displaySection.append(card);
 
     deleteButton.addEventListener('click', handleDeleteNote);
