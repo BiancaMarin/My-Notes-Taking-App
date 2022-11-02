@@ -70,15 +70,17 @@ function displayNotes() {
     title.innerText = note.title;
     const noteDescription = document.createElement('p');
     noteDescription.innerText = note.desc;
+    const btnGroup = document.createElement('div');
+    btnGroup.classList.add('btn');
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete note';
     deleteButton.classList.add('delete-btn');
+    btnGroup.append(deleteButton);
     const showDate = document.createElement('p');
     showDate.innerText = getNoteDate();
     showDate.classList.add('date');
-    card.append(title, noteDescription, deleteButton, showDate);
+    card.append(title, noteDescription, showDate, btnGroup);
     displaySection.append(card);
-
     deleteButton.addEventListener('click', handleDeleteNote);
   });
 }

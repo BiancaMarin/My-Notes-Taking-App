@@ -15,33 +15,30 @@ header {
 header h1 {
   color: #fff;
   padding: 1rem;
-  font-weight: 400;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
+  font-weight: 200;
 }
 
 main .input-dates {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #000;
-  padding-left: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 1rem 0;
 }
 
 main .input-dates h3 {
-  margin: 0.5rem 0;
+  font-weight: 200;
 }
 
 main .input-dates form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+}
+
+main .input-dates form label {
+  font-weight: 200;
+  font-size: 0.8rem;
 }
 
 main .input-dates form input,
@@ -54,6 +51,7 @@ textarea {
 
 main .input-dates form button {
   background-image: linear-gradient(#ff5a00, #ffae00);
+  color: #fff;
   border: none;
   border-radius: 8px;
   height: 2rem;
@@ -61,24 +59,27 @@ main .input-dates form button {
 }
 
 main .input-dates form button:hover {
-  color: #fff;
+  color: #000;
   transition: 0.5s ease-in-out;
   transform: scale(0.9);
 }
 
 main .input-dates form .error {
   color: red;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  padding-bottom: 0.5rem;
 }
 
 .output-dates {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding: 1rem;
 }
 
 main .output-dates .card {
+  display: flex;
+  flex-direction: column;
   background-color: #dddddd;
   padding: 1rem;
   border-radius: 8px;
@@ -87,31 +88,33 @@ main .output-dates .card {
 main .output-dates .card h1 {
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #fff;
+  font-weight: 400;
 }
 
 main .output-dates .card p {
   font-size: 0.8rem;
 }
 
+main .output-dates .card .btn {
+  align-self: flex-end;
+}
+
 main .output-dates .card button {
   background-image: linear-gradient(#ff5a00, #ffae00);
-  color: #000;
+  color: #fff;
   border: none;
-  width: 8rem;
+  width: 6rem;
   height: 2rem;
   margin-top: 0.5rem;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 0.7rem;
 }
 
 main .output-dates .card button:hover {
-  color: #fff;
+  color: #000;
   transition: 0.5s ease-in-out;
   transform: scale(0.9);
-}
-
-.delete-btn {
-  color: red;
 }
 
 main .output-dates .card .date {
@@ -123,24 +126,20 @@ main .output-dates .card .date {
 
 @media screen and (min-width: 768px) {
   main {
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1rem 2rem;
   }
 
   main .input-dates {
-    gap: 2rem;
-    padding-right: 1rem;
-    border-right: 1px solid #000;
     height: 100vh;
-  }
-
-  main .input-dates form {
-    gap: 1rem;
+    justify-content: flex-start;
+    border-right: 1px solid #b2b2b2;
+    padding: 2rem;
   }
 
   .output-dates {
-    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 50vh;
   }
 }
