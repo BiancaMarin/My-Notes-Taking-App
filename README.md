@@ -8,4 +8,4 @@ $ git clone: https://github.com/BiancaMarin/My-Notes-Taking-App.git
 
 ## Illustration
 
-![x] (images/responsive.png)
+![Responsive](images/responsive.png)
